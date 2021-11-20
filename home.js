@@ -23,11 +23,10 @@
 
 //CODE HERE
 
-let greetUser = username => {
-    return 'Welcome back, ' + username
+const greetUser = username => {
+    return `Welcome back, ${username}` 
 }
-let username = 'Wyatt'
-let greeting = `Welcome back, ${username}` 
+console.log((greetUser('Andrew')
 
 
 
@@ -55,11 +54,14 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
-// function canWeDeliver (zipCode) {
-//     if(i = 0; )
-// }
-
-
+const canWeDeliver = zip => {
+    if(deliveryAreaZipCodes.includes(zip)){
+        return `you're in out delivery zone!`
+    } else {
+        return (`Sorry, we can't deliver to the address`)
+    }
+}
+console.log(canWeDeliver(83333))
 /* 
     Problem 2 Continued
 
@@ -79,7 +81,22 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 // CODE HERE
 
+//NEED TO FINISH
+const canWeDeliver = zip => {
+    
+    for(let i = 0; i < deliveryAreaZipCodes.length; i++){
+        if(zip === deliveryAreaZipCodes[i]){
+            
+        }
+    }
+    return `You're in our delivery zone!`
+}
+const canWeDeliver = zip => {
+    deliveryAreaZipCodes.forEach(zipcode =>){
 
+    }
+    return `Sorry, we can't deliver to that address`
+}
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
@@ -114,7 +131,7 @@ const deals = [
 */
 
 //CODE HERE
-
+deals[0].title = deals[0].title.replace('15', '10')
 
 
 /*
@@ -131,3 +148,6 @@ const deals = [
 */
 
 //CODE HERE
+
+deals[1].desc = deals[1].desc.replace('March', 'April')
+console.log(deals)

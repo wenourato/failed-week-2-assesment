@@ -31,7 +31,13 @@
 */
 
 //CODE HERE
-
+const pizza = {
+    name: 'Pepperoni',
+    price: 5,
+    category: 10,
+    rating: 10,
+    tags: ['family', 'food', ]
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +49,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +59,7 @@
 */
 
 //CODE HERE
-
+console.log
 
 /*
     Third, destructure the price off of the
@@ -63,8 +69,8 @@
 */
 
 //CODE HERE
-
-
+const{price} = pizza  //destructuring syntax
+console.log(price)
 /*
     Fourth, and last, destructure the category
     property.
@@ -73,7 +79,8 @@
 */
 
 //CODE HERE
-
+const{category} = pizza
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -107,7 +114,8 @@
 
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
-
+const filteredFood = foodArr.filter(pie => pie.tags.includes('poultry'))
+console.log(filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -149,8 +157,18 @@
 */
 
 //CODE HERE
+const filterByProperty = (property, number, type) => {
+    const filteredArray = foodArr.filter((element) => {
+    if(type === 'above'){
+    return element[property] > number
+    } else if (type === 'below'){
+        return element[property] < number
+    }
+    })
+    return filteredArray
 
-
+}
+console.log(filteredByProperty('price', 7, 'below'))
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
@@ -159,3 +177,4 @@
 */
 
 //CODE HERE
+

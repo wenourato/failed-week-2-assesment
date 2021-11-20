@@ -36,7 +36,7 @@ let cart = [
 //CODE HERE
 
 
-let summedPrice = cart.reduce((total, cart) => total + cart.price, 0)
+let summedPrice = cart.reduce((total, cartItem) => total + cart.price, 0)
 console.log(summedPrice)
 
 
@@ -57,12 +57,11 @@ console.log(summedPrice)
 
 //CODE HERE
 
-function calcFinalPrice(cartTotal, couponValue, tax) {
-  let summedPrice = cart.map(function(elem){
-      return summedPrice + (elem.price * elem.tax) 
-  }) 
+const calcFinalPrice = (cartTotal, couponValue, tax) =>{
+  const result = (cartTotal * (1 + tax)) - couponValue
+  return result
 }
-
+console.log(calcFinalPrice(9.99, 2, .08))
 
 
 //////////////////PROBLEM 3////////////////////
@@ -101,8 +100,6 @@ function calcFinalPrice(cartTotal, couponValue, tax) {
 
 const restaurantCustomers = {
     name: 'Wyatt',
-    phone: 6096515330,
+    phone: '609-651-5330',
     address: 1050 + 'Cherry Hill Dr' ,
     regular: true,
-} 
-console.log(restaurantCustomers)

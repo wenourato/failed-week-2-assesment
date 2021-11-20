@@ -26,12 +26,11 @@ class Employee {
         this.shift = shift;
     }
     getSchedule(){
-        console.log(this.name, 'works on', this.shift);
+        console.log(`${this.name} works on ${this.shift}`);
     }
 }
 
-let employeeOne = new Employee('NAME', 'SHIFT');
-employeeOne.getSchedule();
+
 
 
 
@@ -47,6 +46,8 @@ employeeOne.getSchedule();
 */
 
 //CODE HERE
+const empOne = new Employee('Jess', 'weekday mornings, weekday afternoons')
+
 // constructor (nameOne, shiftOne){
 //     this.nameOne = nameOne;
 //     this.shiftOne = shiftOne;
@@ -63,6 +64,9 @@ employeeOne.getSchedule();
 // */
 
 // //CODE HERE
+
+const empTwo = {...empOne, name: 'Nick'}
+empTwo.name = 'Nick'
 // let employeeTwo = new Employee('Wyatt', 'Morning Shifts');
 // employeeTwo.getSchedule();
 //Im very confused on the order i was supposed to do things here.  im not sure if i did to little or too much
@@ -80,9 +84,7 @@ employeeOne.getSchedule();
 */
 
 //CODE HERE
-let employeeThree = {...Employee} + ('Nick') 
 
-console.log(employeeThree)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -110,12 +112,12 @@ console.log(employeeThree)
 
 //CODE HERE
 class Manager extends Employee {
-    super(name, shift){
-    this.name = 'Scott'
-    this.shift = 'Every day'
+    constructor(name, shifts){
+        super(name, shifts, employees)
+  this.employees = this.employees
 }
 getEmployees(){
-    console.log(this.name[1],  'manages', this.name[0])
+    console.log(`${this.name} manages ${this.name}`)
 }
 }
 
@@ -131,6 +133,7 @@ getEmployees(){
 */
 
 //CODE HERE
+const manager = new Manager('Winston', 'weekday mornings, weekday afternoons', ['CeCe', 'Schmidt'])
 
 
 /*
@@ -139,7 +142,7 @@ getEmployees(){
 */
 
 //CODE HERE
-
+manager.getEmployees()
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -147,7 +150,7 @@ getEmployees(){
 */
 
 //CODE HERE 
-
+manager.addEmployee('Coach')
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -155,3 +158,4 @@ getEmployees(){
 */
 
 //CODE HERE
+manager.getEmployees()
