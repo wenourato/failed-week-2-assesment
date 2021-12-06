@@ -102,4 +102,5 @@ const restaurantCustomers = {
     name: 'Wyatt',
     phone: '609-651-5330',
     address: 1050 + 'Cherry Hill Dr' ,
-    regular: true,
+    regular: true
+}

@@ -26,7 +26,7 @@
 const greetUser = username => {
     return `Welcome back, ${username}` 
 }
-console.log((greetUser('Andrew')
+console.log(greetUser('Andrew'))
 
 
 
@@ -49,14 +49,12 @@ console.log((greetUser('Andrew')
     canWeDeliver(85205) 
         // `You're in our delivery zone!`
 */
-
-const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
-
 //CODE HERE
+const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206];
 
 const canWeDeliver = zip => {
     if(deliveryAreaZipCodes.includes(zip)){
-        return `you're in out delivery zone!`
+        return (`you're in out delivery zone!`)
     } else {
         return (`Sorry, we can't deliver to the address`)
     }
@@ -82,21 +80,24 @@ console.log(canWeDeliver(83333))
 // CODE HERE
 
 //NEED TO FINISH
-const canWeDeliver = zip => {
+const canWeDeliverTwo = zip => {
     
     for(let i = 0; i < deliveryAreaZipCodes.length; i++){
         if(zip === deliveryAreaZipCodes[i]){
-            
+            return `You're in our delivery zone!`
         }
     }
-    return `You're in our delivery zone!`
-}
-const canWeDeliver = zip => {
-    deliveryAreaZipCodes.forEach(zipcode =>){
 
-    }
-    return `Sorry, we can't deliver to that address`
+    return "sorry we can't deliver to your adress"
+
 }
+
+// const canWeDeliver = zip => {
+//     deliveryAreaZipCodes.forEach(zipcode =>){
+
+//     }
+//     return `Sorry, we can't deliver to that address`
+// }
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
